@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Thiết lập mã hóa ký tự và khả năng tương thích trên thiết bị di động -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cute Personal Website</title>
+
+    <!-- Liên kết tới file CSS bên ngoài -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Fonts: Sử dụng font chữ Quicksand -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Thêm CSS trực tiếp trong file (dành cho trang about hoặc các thành phần cụ thể) -->
+    <style>
+        /* Lưới hiển thị các project */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        /* Giao diện từng item trong project */
+        .project-item {
+            background-color: white;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 2px solid #d8b4fe; /* Viền tím pastel */
+            transition: transform 0.3s ease;
+        }
+
+        /* Hiệu ứng phóng to khi hover */
+        .project-item:hover {
+            transform: scale(1.05);
+        }
+
+        /* Hình ảnh trong mỗi project */
+        .project-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover; /* Hiển thị hình vừa khung */
+        }
+
+        /* Tên project */
+        .project-title {
+            padding: 10px;
+            text-align: center;
+            color: #7e22ce;
+            font-weight: 600;
+        }
+
+        /* Giao diện phần tag sở thích */
+        .tag-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .tag {
+            background-color: white;
+            color: #f472b6;
+            padding: 5px 12px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            border: 2px solid #f9a8d4;
+        }
+
+        /* Timeline giáo dục */
+        .timeline-item {
+            background-color: white;
+            border-radius: 16px;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 2px solid #d8b4fe;
+            display: flex;
+        }
+
+        /* Số thứ tự trong timeline */
+        .timeline-number {
+            width: 40px;
+            height: 40px;
+            background-color: #d8b4fe;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #7e22ce;
+            font-weight: bold;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .timeline-content h3 {
+            color: #7e22ce;
+            margin-bottom: 5px;
+        }
+
+        .timeline-date {
+            color: #a855f7;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Phần đầu trang (Header) -->
+    <header>
+        <div class="profile-container">
+            <div class="bow"></div> <!-- Nơ trang trí -->
+            <div class="profile-image">
+                <img src="cute.jpg" alt="My Portrait">
+            </div>
+        </div>
+        <h1>Welcome to My Place</h1>
+        <p class="subtitle">Welcome to the cutest place on Earth! 🌸✨</p>
+    </header>
+
+    <!-- Nội dung chính -->
+    <main>
+
+        <!-- Mục học vấn -->
+        <section class="card">
+            <div class="card-header">
+                <!-- Icon trang trí -->
+                <div class="icon-circle">⋆˚✿˖° 𐙚 ₊ ⊹ ♡⋆˚✿˖° 𐙚 ₊ ⊹ ♡⋆˚✿˖° 𐙚 ₊ ⊹ ♡⋆˚✿˖° 𐙚 ₊ ⊹ ♡⋆˚✿˖° 𐙚 ₊ ⊹ ♡⋆˚✿˖° 𐙚 ₊ ⊹ ♡⋆˚✿˖° 𐙚 ₊ ⊹ ♡⋆˚✿˖° 𐙚 ₊ ⊹ ♡⋆˚✿˖° 𐙚 ₊ ⊹ ♡⋆˚✿˖° 𐙚 ₊ ⊹ ♡⋆˚✿˖° 𐙚 ₊ ⊹ ♡⋆˚✿˖° 𐙚 ₊ ⊹ ♡⋆˚✿˖° 𐙚 ₊ ⊹ ♡⋆˚✿˖° 𐙚 ₊ ⊹ ♡⋆˚✿˖° 𐙚 ₊ ⊹ ♡⋆˚✿˖° 𐙚 ₊ ⊹ </div>
+                <h2>Education</h2>
+            </div>
+
+            <!-- Trường cấp 3 -->
+            <div class="timeline-item">
+                <div class="timeline-number">1</div>
+                <div class="timeline-content">
+                    <h3>Tran Phu - Hoan Kiem Highschool</h3>
+                    <p class="timeline-date">Graduated with a desire to design cute web, 2019-2022</p>
+                </div>
+            </div>
+
+            <!-- Đại học hiện tại -->
+            <div class="timeline-item">
+                <div class="timeline-number">2</div>
+                <div class="timeline-content">
+                    <h3>Hanoi School of Business and Management</h3>
+                    <p class="timeline-date">Still studying here, 2022</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mục dự án -->
+        <section class="card">
+            <div class="card-header">
+                <h2>My Cute Projects</h2>
+            </div>
+
+            <!-- Các project đã làm -->
+            <div class="project-grid">
+                <div class="project-item">
+                    <img src="website.png" alt="Tacos Website" class="project-image">
+                    <div class="project-title">Tacos Website</div>
+                </div>
+
+                <div class="project-item">
+                    <img src="shirt.png" alt="T-shirt Design" class="project-image">
+                    <div class="project-title">T-shirt Design</div>
+                </div>	
+
+                <div class="project-item">
+                    <img src="design.png" alt="Tacos Website Design" class="project-image">
+                    <div class="project-title">Tacos Website Design</div>
+                </div>
+
+                <div class="project-item">
+                    <img src="huyanh.png" alt="Xingtu" class="project-image">
+                    <div class="project-title">Xingtu</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mục sở thích cá nhân -->
+        <section class="card">
+            <div class="card-header">
+                <h2>My Favorite Things</h2>
+            </div>
+
+            <!-- Các sở thích thể hiện qua tag -->
+            <div class="tag-container">
+                <span class="tag">Hello Kitty ♡</span>
+                <span class="tag">Pastels ♡</span>
+                <span class="tag">Cute Stationery ♡</span>
+                <span class="tag">Plushies ♡</span>
+                <span class="tag">Baking ♡</span>
+                <span class="tag">Kawaii Design ♡</span>
+                <span class="tag">Pink ♡</span>
+                <span class="tag">Bows ♡</span>
+                <span class="tag">Hearts ♡</span>
+                <span class="tag">Anime ♡</span>
+                <span class="tag">Cute Apps ♡</span>
+                <span class="tag">Desserts ♡</span>
+                <span class="tag">Cats ♡</span>
+                <span class="tag">Flowers ♡</span>
+                <span class="tag">Rainbows ♡</span>
+            </div>
+        </section>
+    </main>
+
+    <!-- Chân trang (Footer) -->
+    <footer>
+        <p>♡ Thank you for visiting! ♡</p>
+        <p class="copyright">© 2025 I love Hello Kitty. All rights reserved.</p>
+    </footer>
+</body>
+</html>
